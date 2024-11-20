@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMaster</title>
+  <link rel="stylesheet" href="cap.css">
+</head>
+<body>
+  <header>
+    <h1>TaskMaster</h1>
+  </header>
+
+  <main>
+    <section id="taskForm">
+      <h2>Create a Task</h2>
+      <form id="addTaskForm">
+        <input type="text" id="taskTitle" placeholder="Task Title" required>
+        <textarea id="taskDescription" placeholder="Task Description" required></textarea>
+        <input type="date" id="taskDeadline" required>
+        <select id="taskPriority" required>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section id="taskControls">
+      <h2>Manage Tasks</h2>
+      <div id="filters">
+        <label for="filterPriority">Filter by Priority:</label>
+        <select id="filterPriority">
+          <option value="">All</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <label for="searchTasks">Search:</label>
+        <input type="text" id="searchTasks" placeholder="Search tasks...">
+      </div>
+    </section>
+
+    <section id="taskList">
+      <h2>Task List</h2>
+      <ul id="tasks"></ul>
+    </section>
+  </main>
+  
+
+  <script src="cap.js"></script>
+</body>
+</html>
